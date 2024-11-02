@@ -1,6 +1,6 @@
 # Ввод трехзначного числа
 number = input("Введите трехзначное число: ")
-while type(number) != int
+while type(number) != int:4
     try: 
         number = int(number)
     except ValueError:
