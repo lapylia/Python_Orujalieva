@@ -17,6 +17,7 @@ L = 7
 
 try:
     result = average_from_list(elements, K, L)
-print(f"Среднее арифметическое элементов с номерами от до {L}: {result}")
+    print(f"Среднее арифметическое элементов с номерами от до {L}: {result}")
 except ValueError as e:
     print(e)
+    
