@@ -1,9 +1,14 @@
 # 1.В последовательности на n целых элементов в первой ее половине найти
 # количество положительных элементов.
-def find_positive_num(numbers):
-    half_length = len(numbers) // 2
-    first_half = numbers[:half_length]
-    num_count = len([num for num in first_half if num>=0])
-    return num_count
-numbers = list(map(int, input('Введите числа через пробел: ').split()))
-print(find_positive_num(numbers))
+try:
+    # Ввод чисел пользователем
+    numbers = list(map(int, input('Введите числа через пробел: ').split()))
+except ValueError:
+    print("Ошибка: пожалуйста, вводите только целые числа.")
+    exit()
+
+# Лямбда-выражение для подсчета положительных элементов в первой половине
+find_positive_num = lambda nums: len([num for num in nums[:len(nums)//2] if num >= 0])
+
+# Вывод результата
+print("Количество положительных элементов в первой половине:", find_positive_num(numbers))
