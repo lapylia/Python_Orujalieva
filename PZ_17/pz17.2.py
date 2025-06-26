@@ -1,5 +1,3 @@
-# PZ 7 
-
 import tkinter as tk
 
 def code():
